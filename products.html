@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Home | SouthCore Consulting</title>
+<title>Products | SouthCore Consulting</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <!-- templatemo 341 web store -->
@@ -35,6 +35,11 @@ ddsmoothmenu.init({
 	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
 })
 
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
 </script>
 
 <link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -58,17 +63,11 @@ ddsmoothmenu.init({
 		},
 		
 	});
-
-	function clearText(field)
-	{
-		if (field.defaultValue == field.value) field.value = '';
-		else if (field.value == '') field.value = field.defaultValue;
-	}
 </script>
 
 </head>
 
-<body id="home">
+<body id="subpage">
 
 <div id="templatemo_wrapper">
 	<div id="templatemo_header">
@@ -95,8 +94,8 @@ ddsmoothmenu.init({
     
     <div id="templatemo_menu" class="ddsmoothmenu">
         <ul>
-            <li><a href="index.html" class="selected">Home</a></li>
-            <li><a href="products.html">Products</a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="selected">Products</a>
                 <ul>
                     <li><a href="#">Sub menu 1</a></li>
                     <li><a href="#">Sub menu 2</a></li>
@@ -119,13 +118,7 @@ ddsmoothmenu.init({
         <br style="clear: left" />
     </div> <!-- end of templatemo_menu -->
     
-    <div id="templatemo_middle">
-    	<img src="images/templatemo_image_01.png" alt="Image 01" />
-    	<h1>Introducing Web Store</h1>
-        <p>Web Store is a free css template for your personal or commercial websites. Feel free to download, edit and use this template for any purpose.</p>
-        <a href="#" class="buy_now">Browse All Products</a>
-    </div> <!-- END of middle -->
-    
+    <div class="cleaner h20"></div>
     <div id="templatemo_main_top"></div>
     <div id="templatemo_main">
     	<div id="product_slider">
@@ -133,32 +126,32 @@ ddsmoothmenu.init({
                 <div id="SlideItMoo_inner">			
                     <div id="SlideItMoo_items">
                         <div class="SlideItMoo_element">
-                                <a href="#slide1" target="_parent">
+                                <a href="#1" target="_parent">
                                 <img src="images/gallery/01.jpg" alt="product 1" /></a>
                         </div>	
                         <div class="SlideItMoo_element">
-                                <a href="#slide2" target="_parent">
-                                <img src="images/gallery/02.jpg" alt="product 2" /></a>
+                                <a href="#2" target="_parent">
+                                <img src="images/gallery/02.jpg" alt="product 1" /></a>
                         </div>
                         <div class="SlideItMoo_element">
-                                <a href="#slide3" target="_parent">
-                                 <img src="images/gallery/03.jpg" alt="product 3" /></a>
+                                <a href="#3" target="_parent">
+                                 <img src="images/gallery/03.jpg" alt="product 1" /></a>
                         </div>
                         <div class="SlideItMoo_element">
-                                <a href="#slide4" target="_parent">
-                                <img src="images/gallery/04.jpg" alt="product 4" /></a>
+                                <a href="#4" target="_parent">
+                                <img src="images/gallery/04.jpg" alt="product 1" /></a>
                         </div>
                         <div class="SlideItMoo_element">
-                                <a href="#slide5" target="_parent">
-                               <img src="images/gallery/05.jpg" alt="product 5" /></a>
+                                <a href="#5" target="_parent">
+                               <img src="images/gallery/05.jpg" alt="product 1" /></a>
                         </div>
                         <div class="SlideItMoo_element">
-                                <a href="#slide6" target="_parent">
-                                <img src="images/gallery/06.jpg" alt="product 6" /></a>
+                                <a href="#6" target="_parent">
+                                <img src="images/gallery/06.jpg" alt="product 1" /></a>
                         </div>
                         <div class="SlideItMoo_element">
-                                <a href="#slide6" target="_parent">
-                                <img src="images/gallery/07.jpg" alt="product 7" /></a>
+                                <a href="#7" target="_parent">
+                                <img src="images/gallery/07.jpg" alt="product 1" /></a>
                         </div>
                     </div>			
                 </div>
@@ -194,6 +187,7 @@ ddsmoothmenu.init({
         </div> <!-- END of sidebar -->
         
         <div id="content">
+        	<h2>Etiam In Tellus</h2>
         	<div class="col col_14 product_gallery">
             	<a href="productdetail.html"><img src="images/product/01.jpg" alt="Product 01" /></a>
                 <h3>Ut eu feugiat</h3>
@@ -211,7 +205,11 @@ ddsmoothmenu.init({
                 <h3>Mauris consectetur</h3>
                 <p class="product_price">$ 120</p>
                 <a href="shoppingcart.html" class="add_to_cart">Add to Cart</a>
-            </div>        	
+            </div>
+            <a href="#" class="more float_r">View all</a>
+			<div class="cleaner h50"></div>
+            
+            <h2>Hendrerit Justo</h2>
             <div class="col col_14 product_gallery">
             	<a href="productdetail.html"><img src="images/product/04.jpg" alt="Product 04" /></a>
                 <h3>Proin volutpat</h3>
@@ -229,7 +227,11 @@ ddsmoothmenu.init({
                 <h3>Nulla luctus urna</h3>
                 <p class="product_price">$ 193</p>
                 <a href="shoppingcart.html" class="add_to_cart">Add to Cart</a>
-            </div>        	
+            </div>     	
+            <a href="#" class="more float_r">View all</a>
+            <div class="cleaner h50"></div>
+            
+            <h2>Maecenas A Diam</h2>
             <div class="col col_14 product_gallery">
             	<a href="productdetail.html"><img src="images/product/07.jpg" alt="Product 07" /></a>
                 <h3>Pellentesque egestas</h3>
@@ -247,7 +249,9 @@ ddsmoothmenu.init({
                 <h3>Nam vehicula</h3>
                 <p class="product_price">$ 65</p>
                 <a href="shoppingcart.html" class="add_to_cart">Add to Cart</a>
-            </div>        	
+            </div>
+            <a href="#" class="more float_r">View all</a>
+            <div class="cleaner"></div>
         </div> <!-- END of content -->
         <div class="cleaner"></div>
     </div> <!-- END of main -->
